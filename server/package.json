@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "bun src/index.ts",
+    "serve": "bun dist/index.js",
+    "dev": "bun --hot src/index.ts",
+    "build": "bun build src/index.ts --outdir dist --target bun --minify",
+    "format:check": "biome format .",
+    "format:write": "biome format --write ."
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^0.7.1",
+    "@elysiajs/static": "^0.7.1",
+    "@elysiajs/swagger": "^0.7.3",
+    "elysia": "^0.7.15",
+    "zod": "^3.22.2"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}
